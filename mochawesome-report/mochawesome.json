@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-16T13:54:37.467Z",
+    "end": "2026-11-16T13:54:37.491Z",
+    "duration": 24,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f256ea1-5c22-493e-bf3f-128588e7e871",
+      "title": "",
+      "fullFile": "C:\\Projetos\\banco-api-testes\\test\\login.test.js",
+      "file": "\\test\\login.test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aef5cf88-cb02-43d6-ad50-5b4cf702a120",
+          "title": "Testes de login",
+          "fullFile": "C:\\Projetos\\banco-api-testes\\test\\login.test.js",
+          "file": "\\test\\login.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "6b9785ff-f82a-4f28-9f82-49a7a1487c40",
+              "title": "POST /login ",
+              "fullFile": "C:\\Projetos\\banco-api-testes\\test\\login.test.js",
+              "file": "\\test\\login.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Deve retornar 200 com token em string quando usar credenciais válidas",
+                  "fullTitle": "Testes de login POST /login  Deve retornar 200 com token em string quando usar credenciais válidas",
+                  "timedOut": false,
+                  "duration": 21,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "const resposta = await request('http://localhost:3000')\n                    .post('/login')\n                    .set('Content-Type','application/json')\n                    .send({\n                        \"username\":\"julio.lima\",\n                        \"senha\":\"123456\"\n                    })\n                    console.log(resposta.status);\n                    console.log(resposta.body);\n                    expect(resposta.status).to.be.equal(200);\n                    expect(resposta.body.token).to.be.a('string');",
+                  "err": {},
+                  "uuid": "136196ac-d01e-4612-b825-ec6692d8ef41",
+                  "parentUUID": "6b9785ff-f82a-4f28-9f82-49a7a1487c40",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "136196ac-d01e-4612-b825-ec6692d8ef41"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 21,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 200000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 200000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 200000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "12.0.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
